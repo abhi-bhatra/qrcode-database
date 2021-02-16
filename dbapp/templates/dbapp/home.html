@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>User Entry</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  </head>
+  <body>
+    <main role="main">
+
+        <section class="jumbotron text-center">
+          <div class="container">
+            <h1 class="jumbotron-heading">Database Records</h1>
+          </div>
+        </section>
+  
+        <div class="album py-5 bg-light">
+          <div class="container">
+  
+            <div class="row">
+              {% for job in jobs.all %}
+  
+              <div class="col-md-4">
+                <a href="{% url 'detail' job.id %}">
+                <div class="card mb-4 box-shadow">
+                  <div class="card-body">
+                    <h5 class="text-center">{{ job.year_in_school }}</h5>
+                  </div>
+                </div>
+                </a>
+              </div>
+  
+              {% endfor %}
+            </div>
+  
+          </div>
+        </div>
+  
+      </main>
+
+    <script src="{% static 'js/bootstrap.js' %}" ></script>
+    <script src="{% static 'jquery-3.3.1.min.js' %}" ></script>
+  </body>
+</html>

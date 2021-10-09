@@ -26,7 +26,7 @@ SECRET_KEY = '@l6x5++6+w#%$q9*!fj8d)6$86q(b_fnbg9$(k^2k%2eparnr&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [abhinavtestapp.azurewebsites.net]
 
 
 # Application definition
